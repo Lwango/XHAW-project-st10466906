@@ -1,0 +1,127 @@
+/* Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+
+/* Body */
+body { background: #fff; color: #333; }
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e63946; /* red theme */
+  padding: 10px 20px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.navbar .logo img {
+  height: 30px;
+  margin-right: 8px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+}
+
+.nav-links a:hover {
+  background: #b92b39;
+  border-radius: 5px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 180px;
+  top: 100%;
+  left: 0;
+  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
+}
+
+.dropdown-content li a {
+  color: black;
+  padding: 10px;
+}
+
+.dropdown-content li a:hover {
+  background: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #e63946;
+  color: white;
+  padding: 10px 20px;
+}
+header .logo img { width: 40px; height: 40px; }
+header .brand { font-size: 22px; font-weight: bold; }
+.nav-links { list-style: none; display: flex; }
+.nav-links li { margin-left: 20px; position: relative; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+.nav-links a:hover { text-decoration: underline; }
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+.dropdown-menu li { margin: 5px 0; }
+.dropdown-menu a { color: #333; }
+.dropdown:hover .dropdown-menu { display: block; }
+
+/* Info Box */
+.info-box { text-align: center; margin: 20px; padding: 15px; background: #f1f1f1; border-radius: 5px; }
+
+/* Buttons */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin: 30px auto;
+  max-width: 400px;
+  text-align: center;
+}
+.btn {
+  padding: 15px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.btn:hover { background: #e63946; }
