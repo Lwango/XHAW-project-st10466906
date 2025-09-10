@@ -41,4 +41,4 @@ The mobile app was chosen because it provides an **on-the-go solution** for stud
 
 ---
 
-📌 **End of README**
+End of README
