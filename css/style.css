@@ -125,3 +125,53 @@ header .brand { font-size: 22px; font-weight: bold; }
   transition: 0.3s;
 }
 .btn:hover { background: #e63946; }
+.courses-section {
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.courses-section h2 {
+  color: #2c3e50;
+  text-align: center;
+}
+
+.discount-info {
+  background-color: #eef3f7;
+  border-left: 5px solid #2980b9;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  list-style-type: square;
+}
+
+.course-dropdown {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  padding: 10px;
+}
+
+.course-dropdown summary {
+  font-weight: bold;
+  font-size: 18px;
+  color: #34495e;
+  cursor: pointer;
+}
+
+.course-dropdown summary:hover {
+  color: #2980b9;
+}
+
+.course-details {
+  padding: 10px 20px;
+}
+
+.course-details ul {
+  list-style-type: circle;
+  padding-left: 20px;
+}

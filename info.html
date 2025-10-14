@@ -1,40 +1,67 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Course Information</title>
+  <title>Contact Information</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: #004080; color: #fff; }
+    .navbar a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
+    .navbar .dropdown-content { display: none; position: absolute; background: #0059b3; padding: 0.5rem; list-style: none; }
+    .navbar .dropdown:hover .dropdown-content { display: block; }
+    .page-header { text-align: center; padding: 2rem 1rem; background: #e6f2ff; }
+    .page-header a { color: #004080; text-decoration: none; display: inline-block; margin-top: 0.5rem; }
+    .content { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .content h2 { color: #004080; margin-top: 1rem; }
+    .content p { line-height: 1.6; font-size: 1.1rem; }
+    .social-links a { display: inline-block; margin: 0.5rem 1rem 0 0; color: #004080; text-decoration: none; font-weight: bold; }
+  </style>
 </head>
 <body>
-    <header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/alfredo.jpeg" alt="Logo">
-      <span>Alfredo</span>
-    </div>
 
-    <ul class="nav-links">
-      <li><a href="home_page.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Courses ▾</a>
-        <ul class="dropdown-content">
-          <li><a href="6month.html">6 Month Courses</a></li>
-          <li><a href="6week.html">6 Week Courses</a></li>
-        </ul>
-      </li>
-      <li><a href="fees.html">Calculate Fees</a></li>
-      <li><a href="info.html">Course Info</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <!-- Navigation -->
   <header>
-    <h1>Course Information</h1>
-    <a href="home_page.html">← Back to Home</a>
+    <nav class="navbar">
+      <div class="logo"><img src="images/alfredo.jpeg" alt="Logo" style="height:40px; vertical-align:middle;"> <span>Alfredo</span></div>
+      <ul class="nav-links">
+        <li><a href="home_page.html">Home</a></li>
+        <li class="dropdown"><a href="#">Courses ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="6month.html">6 Month Courses</a></li>
+            <li><a href="6week.html">6 Week Courses</a></li>
+          </ul>
+        </li>
+        <li><a href="fees.html">Calculate Fees</a></li>
+        <li><a href="info.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <section>
-    <p>Here you will find detailed information about each course offered, including requirements, schedules, and outcomes.</p>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Contact Information</h1>
+    <a href="home_page.html">← Back to Home</a>
   </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <p>If you have any questions or would like more information about our courses, please get in touch using the following:</p>
+
+    <h2>Phone</h2>
+    <p>066 213 45</p>
+
+    <h2>Email</h2>
+    <p>alfredoempowerment@gmail.com</p>
+
+    <h2>Social Media</h2>
+    <div class="social-links">
+      <a href="https://www.instagram.com/alfredoOfficial" target="_blank">Instagram: alfredoOfficial</a>
+      <a href="https://www.tiktok.com/@alfredoOfficial" target="_blank">TikTok: alfredoOfficial</a>
+      <a href="https://twitter.com/alfredoOfficial" target="_blank">Twitter: alfredoOfficial</a>
+    </div>
+  </section>
+
 </body>
 </html>

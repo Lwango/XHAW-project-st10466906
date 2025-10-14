@@ -3,50 +3,207 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calculate Fees</title>
+  <title>Calculate Course Fees</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
+    .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: #004080; color: #fff; }
+    .navbar a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
+    .navbar .dropdown-content { display: none; position: absolute; background: #0059b3; padding: 0.5rem; list-style: none; }
+    .navbar .dropdown:hover .dropdown-content { display: block; }
+    .page-header { text-align: center; padding: 2rem 1rem; background: #e6f2ff; }
+    .courses { max-width: 900px; margin: 2rem auto; padding: 1rem; }
+    .course-dropdown { background: #fff; padding: 1rem; margin: 1rem 0; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    summary { font-weight: bold; cursor: pointer; }
+    .course-details ul { margin-left: 1.5rem; }
+    .fees-discount { max-width: 900px; margin: 2rem auto; background: #cce0ff; padding: 1rem; border-radius: 10px; }
+    .fees-total { max-width: 900px; margin: 2rem auto; background: #d9f2d9; padding: 1rem; border-radius: 10px; text-align: center; font-size: 1.5rem; }
+    .back-link { display: inline-block; margin: 1rem 0; color: #004080; text-decoration: none; }
+    .course-checkbox { margin-right: 0.5rem; }
+    h3 { margin-top: 2rem; }
+  </style>
 </head>
 <body>
-    <header>
-  <nav class="navbar">
-    <div class="logo">
-      <img src="images/alfredo.jpeg" alt="Logo">
-      <span>Alfredo</span>
-    </div>
 
-    <ul class="nav-links">
-      <li><a href="home_page.html">Home</a></li>
-      <li class="dropdown">
-        <a href="#">Courses ▾</a>
-        <ul class="dropdown-content">
-          <li><a href="6month.html">6 Month Courses</a></li>
-          <li><a href="6week.html">6 Week Courses</a></li>
-        </ul>
-      </li>
-      <li><a href="fees.html">Calculate Fees</a></li>
-      <li><a href="info.html">Course Info</a></li>
-    </ul>
-  </nav>
-</header>
-
+  <!-- Navigation -->
   <header>
-    <h1>Calculate Course Fees</h1>
-    <a href="home_page.html">← Back to Home</a>
+    <nav class="navbar">
+      <div class="logo"><img src="images/alfredo.jpeg" alt="Logo" style="height:40px; vertical-align:middle;"> <span>Alfredo</span></div>
+      <ul class="nav-links">
+        <li><a href="home_page.html">Home</a></li>
+        <li class="dropdown"><a href="#">Courses ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="6month.html">6 Month Courses</a></li>
+            <li><a href="6week.html">6 Week Courses</a></li>
+          </ul>
+        </li>
+        <li><a href="fees.html">Calculate Fees</a></li>
+        <li><a href="info.html">Contact</a></li>
+      </ul>
+    </nav>
   </header>
-  <section>
-    <!--added payment options-->
-    <form>
-      <label for="courseType">Select Course:</label>
-      <select id="courseType">
-        <option value="6month">6 Month Course - R5000</option>
-        <option value="6week">6 Week Course - R2000</option>
-      </select>
-      <br><br>
-      <label for="students">Number of Students:</label>
-      <input type="number" id="students" min="1" value="1">
-      <br><br>
-      <button type="submit">Calculate</button>
-    </form>
-  </section>
+
+  <main>
+    <section class="page-header">
+      <h1>Calculate Course Fees</h1>
+      <a class="back-link" href="home_page.html">← Back to Home</a>
+    </section>
+
+    <section class="fees-discount">
+      <h2>Course Fees & Discounts</h2>
+      <p>Select any combination of courses below. Discounts will be applied automatically:</p>
+      <ul>
+        <li>1 course — no discount</li>
+        <li>2 courses — 5% discount</li>
+        <li>3 courses — 10% discount</li>
+        <li>More than 3 courses — 15% discount</li>
+      </ul>
+    </section>
+
+    <section class="courses">
+      <h2>Select Courses</h2>
+
+      <h3>6 Month Courses (R1500 each)</h3>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="1500"> First Aid</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide first aid awareness and basic life support.</p>
+          <ul>
+            <li>Wounds and bleeding</li>
+            <li>Burns and fractures</li>
+            <li>Emergency scene management</li>
+            <li>Cardio-Pulmonary Resuscitation (CPR)</li>
+            <li>Respiratory distress (e.g., choking, blocked airway)</li>
+          </ul>
+        </div>
+      </details>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Sewing</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide alterations and new garment tailoring services.</p>
+          <ul>
+            <li>Types of stitches</li>
+            <li>Threading a sewing machine</li>
+            <li>Sewing buttons, zips, hems, and seams</li>
+            <li>Alterations</li>
+            <li>Designing and sewing new garments</li>
+          </ul>
+        </div>
+      </details>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Landscaping</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide landscaping services for new and established gardens.</p>
+          <ul>
+            <li>Indigenous and exotic plants and trees</li>
+            <li>Fixed structures (fountains, statues, benches, tables, built-in braai)</li>
+            <li>Balancing of plants and trees in a garden</li>
+            <li>Aesthetics of plant shapes and colours</li>
+            <li>Garden layout</li>
+          </ul>
+        </div>
+      </details>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="1500"> Life Skills</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide skills to navigate basic life necessities.</p>
+          <ul>
+            <li>Opening a bank account</li>
+            <li>Basic labour law (know your rights)</li>
+            <li>Basic reading and writing literacy</li>
+            <li>Basic numeric literacy</li>
+          </ul>
+        </div>
+      </details>
+
+      <h3>6 Week Courses (R750 each)</h3>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="750"> Child Minding</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide basic child and baby care.</p>
+          <ul>
+            <li>Birth to six-month-old baby needs</li>
+            <li>Seven-month to one-year-old needs</li>
+            <li>Toddler needs</li>
+            <li>Educational toys</li>
+          </ul>
+        </div>
+      </details>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="750"> Cooking</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To prepare and cook nutritious family meals.</p>
+          <ul>
+            <li>Nutritional requirements for a healthy body</li>
+            <li>Types of protein, carbohydrates and vegetables</li>
+            <li>Planning meals</li>
+            <li>Tasty and nutritious recipes</li>
+            <li>Preparation and cooking of meals</li>
+          </ul>
+        </div>
+      </details>
+
+      <label><input type="checkbox" class="course-checkbox" data-fee="750"> Garden Maintenance</label>
+      <details class="course-dropdown">
+        <summary>Details</summary>
+        <div class="course-details">
+          <p><strong>Purpose:</strong> To provide basic knowledge of watering, pruning and planting in a domestic garden.</p>
+          <ul>
+            <li>Water restrictions and the watering requirements of indigenous and exotic plants</li>
+            <li>Pruning and propagation of plants</li>
+            <li>Planting techniques for different plant types</li>
+          </ul>
+        </div>
+      </details>
+    </section>
+
+    <!-- The Total will be locted at the bottom -->
+    <section class="fees-total">
+      <h2>Total Fees: R<span id="total-fees">0</span></h2>
+    </section>
+
+  </main>
+
+  <script>
+    const checkboxes = document.querySelectorAll('.course-checkbox');
+    const totalFeesElement = document.getElementById('total-fees');
+
+    function calculateFees() {
+      let total = 0;
+      let selectedCount = 0;
+
+      checkboxes.forEach(cb => {
+        if (cb.checked) {
+          total += parseFloat(cb.dataset.fee);
+          selectedCount++;
+        }
+      });
+
+      let discount = 0;
+      if (selectedCount === 2) discount = 0.05;
+      else if (selectedCount === 3) discount = 0.10;
+      else if (selectedCount > 3) discount = 0.15;
+
+      const discountedTotal = total - (total * discount);
+      totalFeesElement.textContent = discountedTotal.toFixed(2);
+    }
+
+    checkboxes.forEach(cb => cb.addEventListener('change', calculateFees));
+  </script>
 </body>
 </html>
+
+
+      
