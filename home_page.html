@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,18 +6,34 @@
   <title>Alfredo School - Home</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: #004080; color: #fff; }
-    .navbar a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
-    .navbar .dropdown-content { display: none; position: absolute; background: #0059b3; padding: 0.5rem; list-style: none; }
-    .navbar .dropdown:hover .dropdown-content { display: block; }
-    .page-header { text-align: center; padding: 2rem 1rem; background: #e6f2ff; }
-    .page-header h1 { margin-bottom: 1rem; }
-    .info-box { max-width: 900px; margin: 2rem auto; padding: 1.5rem; background: #fff; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
-    .info-box img { border-radius: 10px; margin-top: 1rem; }
-    .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin: 2rem auto; max-width: 900px; }
-    .btn { display: inline-block; padding: 1rem 2rem; background: #004080; color: #fff; text-decoration: none; border-radius: 10px; font-weight: bold; transition: background 0.3s; }
-    .btn:hover { background: #0059b3; }
+    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333; }
+    .navbar { display:flex; justify-content:space-between; padding:1rem 2rem; background:#004080; color:#fff; align-items:center; }
+    .navbar a { color:#fff; text-decoration:none; margin:0 0.5rem; }
+    .nav-links { list-style:none; display:flex; gap:1rem; align-items:center; margin:0; padding:0; }
+    .nav-links li { position:relative; }
+    .dropdown-content {
+      display:none;
+      position:absolute;
+      background:#0059b3;
+      padding:0.5rem 0;
+      list-style:none;
+      top:100%;
+      left:0;
+      min-width:180px;
+      border-radius:5px;
+      z-index:10;
+    }
+    .dropdown-content li a { color:#fff; padding:0.5rem 1rem; display:block; }
+    .dropdown:hover .dropdown-content { display:block; }
+    .dropdown-content li a:hover { background:#003366; }
+
+    .page-header { text-align:center; padding:2rem 1rem; background:#e6f2ff; }
+    .page-header p { max-width:600px; margin:0.5rem auto; }
+    .info-box { max-width:900px; margin:2rem auto; padding:1rem; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); text-align:center; }
+    .info-box img { margin-top:1rem; border-radius:10px; }
+    .buttons { text-align:center; margin:2rem 0; }
+    .buttons .btn { text-decoration:none; display:inline-block; margin:0.5rem; padding:0.8rem 1.5rem; background:#004080; color:#fff; border-radius:5px; font-weight:bold; }
+    .buttons .btn:hover { background:#003366; }
   </style>
 </head>
 <body>
@@ -26,15 +41,35 @@
   <!-- Navigation -->
   <header>
     <nav class="navbar">
-      <div class="logo"><img src="images/alfredo.jpeg" alt="Logo" style="height:40px; vertical-align:middle;"> <span>Alfredo</span></div>
+      <div class="logo">
+        <img src="images/alfredo.jpeg" alt="Logo" style="height:40px; vertical-align:middle;">
+        <span>Alfredo</span>
+      </div>
+
       <ul class="nav-links">
         <li><a href="home_page.html">Home</a></li>
-        <li class="dropdown"><a href="#">Courses ▾</a>
+
+        <!-- 6 Month Courses Dropdown -->
+        <li class="dropdown">
+          <a href="#">6 Month Courses ▾</a>
           <ul class="dropdown-content">
-            <li><a href="6month.html">6 Month Courses</a></li>
-            <li><a href="6week.html">6 Week Courses</a></li>
+            <li><a href="courses/firstaid.html">First Aid</a></li>
+            <li><a href="courses/sewing.html">Sewing</a></li>
+            <li><a href="courses/lifeskills.html">Life Skills</a></li>
+            <li><a href="courses/landscaping.html">Landscaping</a></li>
           </ul>
         </li>
+
+        <!-- 6 Week Courses Dropdown -->
+        <li class="dropdown">
+          <a href="#">6 Week Courses ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="courses/childminding.html">Child Minding</a></li>
+            <li><a href="courses/cooking.html">Cooking</a></li>
+            <li><a href="courses/gardenmaintenance.html">Garden Maintenance</a></li>
+          </ul>
+        </li>
+
         <li><a href="fees.html">Calculate Fees</a></li>
         <li><a href="info.html">Contact</a></li>
       </ul>

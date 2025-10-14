@@ -1,177 +1,148 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfredo School - Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
 
-/* Body */
-body { background: #fff; color: #333; }
-/* Navbar styling */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: #e63946; /* red theme */
-  padding: 10px 20px;
-}
+    body { background: #c5a477; color: #333; }
 
-.navbar .logo {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-}
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #004080;
+      padding: 10px 20px;
+      color: #fff;
+    }
 
-.navbar .logo img {
-  height: 30px;
-  margin-right: 8px;
-}
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      font-weight: bold;
+    }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-  margin: 0;
-  padding: 0;
-}
+    .navbar .logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
 
-.nav-links li {
-  position: relative;
-}
+    .nav-links { list-style: none; display: flex; gap: 15px; align-items: center; }
+    .nav-links li { position: relative; }
+    .nav-links a { color: #fff; text-decoration: none; padding: 8px 12px; display: block; }
+    .nav-links a:hover { text-decoration: underline; }
 
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  padding: 10px 15px;
-  display: block;
-}
+    /* Dropdown */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background: #5e81a5;
+      top: 100%;
+      left: 0;
+      min-width: 160px;
+      border-radius: 5px;
+      z-index: 10;
+    }
 
-.nav-links a:hover {
-  background: #b92b39;
-  border-radius: 5px;
-}
+    .dropdown-content li a { color: #fff; padding: 8px 12px; display: block; }
+    .dropdown-content li a:hover { background: #003366; }
+    .dropdown:hover .dropdown-content { display: block; }
 
-/* Dropdown */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background: white;
-  min-width: 180px;
-  top: 100%;
-  left: 0;
-  box-shadow: 0px 4px 6px rgba(0,0,0,0.2);
-}
+    /* Page Header */
+    .page-header { text-align: center; padding: 2rem 1rem; background: #e6f2ff; }
+    .page-header p { max-width: 600px; margin: 0.5rem auto; }
 
-.dropdown-content li a {
-  color: black;
-  padding: 10px;
-}
+    /* Info Box */
+    .info-box { max-width: 900px; margin: 2rem auto; padding: 1rem; background: #f9f3f3; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+    .info-box img { margin-top: 1rem; border-radius: 10px; }
 
-.dropdown-content li a:hover {
-  background: #f1f1f1;
-}
+    /* Buttons */
+    .buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin: 2rem 0;
+    }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    .buttons .btn {
+      padding: 0.8rem 1.5rem;
+      background: #004080;
+      color: #fafaf6;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
 
-/* Header */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #e63946;
-  color: white;
-  padding: 10px 20px;
-}
-header .logo img { width: 40px; height: 40px; }
-header .brand { font-size: 22px; font-weight: bold; }
-.nav-links { list-style: none; display: flex; }
-.nav-links li { margin-left: 20px; position: relative; }
-.nav-links a { color: white; text-decoration: none; font-weight: bold; }
-.nav-links a:hover { text-decoration: underline; }
+    .buttons .btn:hover { background: #003366; }
+  </style>
+</head>
+<body>
 
-/* Dropdown */
-.dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  color: black;
-  padding: 10px;
-  border-radius: 5px;
-}
-.dropdown-menu li { margin: 5px 0; }
-.dropdown-menu a { color: #333; }
-.dropdown:hover .dropdown-menu { display: block; }
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="images/alfredo.jpeg" alt="Logo">
+        <span>Alfredo</span>
+      </div>
 
-/* Info Box */
-.info-box { text-align: center; margin: 20px; padding: 15px; background: #f1f1f1; border-radius: 5px; }
+      <ul class="nav-links">
+        <li><a href="home_page.html">Home</a></li>
 
-/* Buttons */
-.buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin: 30px auto;
-  max-width: 400px;
-  text-align: center;
-}
-.btn {
-  padding: 15px;
-  background: #333;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-.btn:hover { background: #e63946; }
-.courses-section {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 40px auto;
-  font-family: "Poppins", sans-serif;
-}
+        <!-- 6 Month Courses Dropdown -->
+        <li class="dropdown">
+          <a href="#">6 Month Courses ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="courses/firstaid.html">First Aid</a></li>
+            <li><a href="courses/sewing.html">Sewing</a></li>
+            <li><a href="courses/lifeskills.html">Life Skills</a></li>
+            <li><a href="courses/landscaping.html">Landscaping</a></li>
+          </ul>
+        </li>
 
-.courses-section h2 {
-  color: #2c3e50;
-  text-align: center;
-}
+        <!-- 6 Week Courses Dropdown -->
+        <li class="dropdown">
+          <a href="#">6 Week Courses ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="courses/childminding.html">Child Minding</a></li>
+            <li><a href="courses/cooking.html">Cooking</a></li>
+            <li><a href="courses/gardenmaintenance.html">Garden Maintenance</a></li>
+          </ul>
+        </li>
 
-.discount-info {
-  background-color: #eef3f7;
-  border-left: 5px solid #2980b9;
-  padding: 10px 20px;
-  margin-bottom: 20px;
-  list-style-type: square;
-}
+        <li><a href="fees.html">Calculate Fees</a></li>
+        <li><a href="info.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-.course-dropdown {
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  padding: 10px;
-}
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>Welcome to Alfredo School</h1>
+    <p>We provide skills and education for individuals seeking opportunities in the employment world.</p>
+  </section>
 
-.course-dropdown summary {
-  font-weight: bold;
-  font-size: 18px;
-  color: #34495e;
-  cursor: pointer;
-}
+  <!-- Info Box -->
+  <section class="info-box">
+    <p>Alfredo School is a new institution committed to empowering people through practical courses and skill development.</p>
+    <img src="images/alfredo.jpeg" width="225" height="200" alt="Alfredo School Logo">
+  </section>
 
-.course-dropdown summary:hover {
-  color: #2980b9;
-}
+  <!-- Centered Buttons -->
+  <section class="buttons">
+    <a href="6month.html" class="btn">6 Month Courses</a>
+    <a href="6week.html" class="btn">6 Week Courses</a>
+    <a href="fees.html" class="btn">Calculate Fees</a>
+    <a href="info.html" class="btn">Contact</a>
+  </section>
 
-.course-details {
-  padding: 10px 20px;
-}
-
-.course-details ul {
-  list-style-type: circle;
-  padding-left: 20px;
-}
+</body>
+</html>

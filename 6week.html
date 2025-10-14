@@ -6,22 +6,21 @@
   <title>6 Week Courses</title>
   <link rel="stylesheet" href="css/style.css">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    .navbar { display: flex; justify-content: space-between; padding: 1rem 2rem; background: #004080; color: #fff; }
-    .navbar a { color: #fff; text-decoration: none; margin: 0 0.5rem; }
-    .navbar .dropdown-content { display: none; position: absolute; background: #0059b3; padding: 0.5rem; list-style: none; }
-    .navbar .dropdown:hover .dropdown-content { display: block; }
-    .page-header { text-align: center; padding: 2rem 1rem; background: #e6f2ff; }
-    .courses { max-width: 800px; margin: 2rem auto; padding: 1rem; }
-    .course-dropdown { background: #fff; padding: 1rem; margin: 1rem 0; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-    summary { font-weight: bold; cursor: pointer; }
-    .course-details ul { margin-left: 1.5rem; }
-    .fees-discount { max-width: 800px; margin: 2rem auto; background: #cce0ff; padding: 1rem; border-radius: 10px; }
-    .back-link { display: inline-block; margin: 1rem 0; color: #004080; text-decoration: none; }
+    body { font-family: Arial, sans-serif; margin:0; background:#f9f9f9; color:#333; }
+    .navbar { display:flex; justify-content:space-between; padding:1rem 2rem; background:#004080; color:#fff; }
+    .navbar a { color:#fff; text-decoration:none; margin:0 0.5rem; }
+    .navbar .dropdown-content { display:none; position:absolute; background:#0059b3; padding:0.5rem; list-style:none; }
+    .navbar .dropdown:hover .dropdown-content { display:block; }
+    .page-header { text-align:center; padding:2rem 1rem; background:#e6f2ff; }
+    .page-header a { color:#004080; text-decoration:none; display:inline-block; margin-top:0.5rem; }
+    .content { max-width:900px; margin:2rem auto; padding:1rem; background:#fff; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.1); }
+    .course { margin-bottom:1.5rem; }
+    .course a { text-decoration:none; font-weight:bold; font-size:1.1rem; color:#004080; }
   </style>
 </head>
 <body>
 
+  <!-- Navigation -->
   <header>
     <nav class="navbar">
       <div class="logo"><img src="images/alfredo.jpeg" alt="Logo" style="height:40px; vertical-align:middle;"> <span>Alfredo</span></div>
@@ -39,69 +38,20 @@
     </nav>
   </header>
 
-  <main>
-    <section class="page-header">
-      <h1>6 Week Courses</h1>
-      <a class="back-link" href="home_page.html">← Back to Home</a>
-    </section>
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>6 Week Courses</h1>
+    <a href="home_page.html">← Back to Home</a>
+  </section>
 
-    <section class="fees-discount">
-      <h2>Course Fees & Discounts</h2>
-      <p>Each 6 Week Course fee: R750</p>
-      <ul>
-        <li>1 course — no discount</li>
-        <li>2 courses — 5% discount</li>
-        <li>3 courses — 10% discount</li>
-        <li>More than 3 courses — 15% discount</li>
-      </ul>
-    </section>
+  <!-- Course Links -->
+  <section class="content">
+    <h2>Available 6 Week Courses</h2>
+    <div class="course"><a href="courses/childminding.html">Child Minding — R750</a></div>
+    <div class="course"><a href="courses/cooking.html">Cooking — R750</a></div>
+    <div class="course"><a href="courses/gardenmaintenance.html">Garden Maintenance — R750</a></div>
+  </section>
 
-    <section class="courses">
-      <h2>Available 6 Week Courses</h2>
-
-      <details class="course-dropdown">
-        <summary>Child Minding — R750</summary>
-        <div class="course-details">
-          <p><strong>Purpose:</strong> To provide basic child and baby care.</p>
-          <p><strong>Content:</strong></p>
-          <ul>
-            <li>Birth to six-month-old baby needs</li>
-            <li>Seven-month to one-year-old needs</li>
-            <li>Toddler needs</li>
-            <li>Educational toys</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="course-dropdown">
-        <summary>Cooking — R750</summary>
-        <div class="course-details">
-          <p><strong>Purpose:</strong> To prepare and cook nutritious family meals.</p>
-          <p><strong>Content:</strong></p>
-          <ul>
-            <li>Nutritional requirements for a healthy body</li>
-            <li>Types of protein, carbohydrates and vegetables</li>
-            <li>Planning meals</li>
-            <li>Tasty and nutritious recipes</li>
-            <li>Preparation and cooking of meals</li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="course-dropdown">
-        <summary>Garden Maintenance — R750</summary>
-        <div class="course-details">
-          <p><strong>Purpose:</strong> To provide basic knowledge of watering, pruning and planting in a domestic garden.</p>
-          <p><strong>Content:</strong></p>
-          <ul>
-            <li>Water restrictions and the watering requirements of indigenous and exotic plants</li>
-            <li>Pruning and propagation of plants</li>
-            <li>Planting techniques for different plant types</li>
-          </ul>
-        </div>
-      </details>
-    </section>
-  </main>
 </body>
 </html>
 
